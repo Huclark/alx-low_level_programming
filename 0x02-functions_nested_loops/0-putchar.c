@@ -2,7 +2,7 @@
 
 /**
  * main - Prints _putchar
- *
+ * Written by Huclark
  * Return: 0 if successful
  */
 
