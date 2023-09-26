@@ -22,7 +22,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (index == 0)
 	{
-		*head = node_navigator->next;
+		*head = (*head)->next;
 		free(node_navigator);
 		return (1);
 	}
