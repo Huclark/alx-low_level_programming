@@ -6,7 +6,6 @@ This project is Bit manipulation and bitwise operators in C
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 
 ## Features
 
