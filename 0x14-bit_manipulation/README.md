@@ -1,6 +1,6 @@
 # 0x14. C - Bit manipulation
 
-This project is Bit manipulation and bitwise operators in C
+This is a project on Bit manipulation and bitwise operators in C
 
 ## Table of Contents
 
