@@ -27,11 +27,11 @@ char *buffer_creator(char *file)
 
 void exit_file(int fd)
 {
-	int return_value;
+	int ret_value;
 
-	return_value = close(fd);
+	ret_value = close(fd);
 
-	if (return_value == -1)
+	if (ret_value == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -77,15 +77,12 @@ int main(int argc, char *argv[])
 			free(buff);
 			exit(99);
 		}
-
 		br = read(start, buff, 1024);
 		end = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (br > 0);
-
 	free(buff);
 	exit_file(start);
 	exit_file(end);
-
 	return (0);
 }
