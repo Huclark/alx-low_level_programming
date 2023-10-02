@@ -12,48 +12,21 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file_ptr = NULL;
-	char *buff;
-	size_t br; /* bytes read in file */
-	size_t bw; /* bytes written to standard output */
+	ssize_t file_des; /* File descriptor */
+	char *buff; /* bufffer to hold string */
+	ssize_t br; /* bytes read in file */
+	ssize_t bw; /* bytes written to standard output */
 
-	if (filename == NULL)
-		return (0);
+	file_des = open(filename, O_RDONLY);
 
-	file_ptr = fopen(filename, "r");
-
-	if (file_ptr == NULL)
+	if (file_des == -1)
 		return (0);
 
 	buff = malloc(sizeof(char) * (letters + 1));
-
-	if (buff == NULL)
-	{
-		fclose(file_ptr);
-		return (0);
-	}
-
-	br = fread(buff, sizeof(char), letters, file_ptr);
-
-	if (br < 0)
-	{
-		free(buff);
-		fclose(file_ptr);
-		return (0);
-	}
-
-	buff[br] = '\0';
-
+	br = read(file_des, buff, letters);
 	bw = write(STDOUT_FILENO, buff, br);
 
-	if (bw < 0 || bw != br)
-	{
-		free(buff);
-		fclose(file_ptr);
-		return (0);
-	}
-
 	free(buff);
-	fclose(file_ptr);
-	return (br);
+	close(file_des);
+	return (bw);
 }
