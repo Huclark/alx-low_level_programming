@@ -1,7 +1,4 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
 
 /**
  * buffer_creator - Creates buffer.
