@@ -27,7 +27,7 @@ void check_elf(unsigned char *e_ident)
 {
 	int index;
 
-	while (index < 4)
+	for (index = 0; index < 4; index++)
 	{
 		if (e_ident[index] != 127 &&
 		    e_ident[index] != 'E' &&
@@ -37,7 +37,6 @@ void check_elf(unsigned char *e_ident)
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
 		}
-		index++;
 	}
 }
 
@@ -49,11 +48,11 @@ void check_elf(unsigned char *e_ident)
  */
 void print_magic(unsigned char *e_ident)
 {
-	int index = 0;
+	int index;
 
 	printf("  Magic:   ");
 
-	while (index < EI_NIDENT)
+	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", e_ident[index]);
 
@@ -61,7 +60,6 @@ void print_magic(unsigned char *e_ident)
 			printf("\n");
 		else
 			printf(" ");
-		index++;
 	}
 }
 
@@ -193,7 +191,6 @@ void print_abi(unsigned char *e_ident)
  * @e_type: The ELF type.
  * @e_ident: A pointer to an array containing the ELF class.
  */
-
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
