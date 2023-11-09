@@ -1,13 +1,14 @@
-# 0x04. Python - More Data Structures: Set, Dictionary
-![alt text](https://i.redd.it/python-meme-true-v0-g6vhhhsht6b91.jpg?s=e3b4386629ab2f4abbcc1f7e4f61a871a87f1550)
+# 0x17. C - Doubly linked lists
+![alt text](https://programmerhumor.io/wp-content/uploads/2022/02/programmerhumor-io-programming-memes-e91bafbec1a48f7-758x614.jpg)
 
 ## Table of Contents
 - [About](#about)
 - [Objective](#objective)
 - [Requirements](#requirements)
+- [More Info](#more-info)
 
 ## About
-Diving deeper into Data Structures in Python by covering Sets and Dictionaries.
+Having already learnt about Singly linked lists, I take a step further to learn about Doubly linked lists.
 
 ## Objectives
 At the end of this project I am expected to explain to anyone, without the help of Google:
