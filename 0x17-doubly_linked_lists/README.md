@@ -1,5 +1,5 @@
 # 0x17. C - Doubly linked lists
-![alt text](https://programmerhumor.io/wp-content/uploads/2022/02/programmerhumor-io-programming-memes-e91bafbec1a48f7-758x614.jpg)
+![alt text](https://pbs.twimg.com/media/F-fKsIxXQAA2M9_?format=jpg&name=small)
 
 ## Table of Contents
 - [About](#about)
