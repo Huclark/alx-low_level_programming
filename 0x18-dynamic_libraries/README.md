@@ -7,6 +7,7 @@
 - [Requirements](#requirements)
 	- [C](#c)
 	- [Bash](#bash)
+- [Bash Scripts](#bash-scripts)
 
 ## About
 Having already learnt about Static Libraries in C, I take a step further to learn about Dynamic Libraries in C.
@@ -43,3 +44,8 @@ At the end of this project I am expected to explain to anyone, without the help 
 - **Shebang**: The first line of all your files should be exactly `#!/bin/bash`
 - **Mandatory README**: A `README.md` file, at the root of the folder of the project, describing what each script is doing.
 - **File type**: All your files must be executable
+
+## Bash Scripts
+| Script                  | Purpose                       |
+| ----------------------- |------------------------------ |
+| `1-create_dynamic_lib.sh` | Creates a dynamic library called liball.so from all the .c files that are in the current directory |
