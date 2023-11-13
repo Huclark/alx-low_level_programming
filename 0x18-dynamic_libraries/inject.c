@@ -10,9 +10,13 @@
 int printf(const char *format, ...)
 {
 	char *message = "9 8 10 24 75 - 9\nCongratulations, you win the Jackpot!\n";
+	int len = 0;
+
+	while (message[len] != '\0')
+		len++;
 
 	/* Print winning message to standard output */
-	write(1, message, strlen(message));
+	write(1, message, len);
 
 	exit(EXIT_SUCCESS); /* Exit the program immediately */
 }
