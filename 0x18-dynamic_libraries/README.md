@@ -49,3 +49,4 @@ At the end of this project I am expected to explain to anyone, without the help 
 | Script                  | Purpose                       |
 | ----------------------- |------------------------------ |
 | `1-create_dynamic_lib.sh` | Creates a dynamic library called `liball.so` from all the `.c` files that are in the current directory |
+| `101-make_me_win.sh`      | Makes a user win a lottery by using the concept of dynamic libraries and `LD_PRELOAD` environment variable to help the user cheat |
