@@ -44,6 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new)
 		return (0);
 
+	/* Set the key of the new node */
 	new->key = strdup(key);
 	if (!new->key)
 	{
@@ -51,6 +52,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
+	/* Set the value of the new node */
 	new->value = strdup(value);
 	if (!new->value)
 	{
@@ -59,7 +61,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
+	/* Update the new node to point to the beginning of list */
 	new->next = ht->array[idx];
+
+	/* Update head to the new node */
 	ht->array[idx] = new;
 
 	return (1);
