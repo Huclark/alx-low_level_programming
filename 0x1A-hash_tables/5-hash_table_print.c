@@ -7,7 +7,7 @@
 void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *current;
-	unsigned long idx = 0;
+	unsigned long int idx = 0;
 	int flag = 1; /* Flag to check if it's first item in hash table */
 
 	if (!ht)
